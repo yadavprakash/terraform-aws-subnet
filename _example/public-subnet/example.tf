@@ -27,7 +27,7 @@ module "subnet" {
   name               = "app"
   environment        = "test"
   availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
-  vpc_id             = module.vpc.vpc_id
+  vpc_id             = module.vpc.id
   type               = "public"
   igw_id             = module.vpc.igw_id
   ipv4_public_cidrs  = ["10.0.1.0/24", "10.0.13.0/24", "10.0.18.0/24"]
