@@ -32,4 +32,5 @@ module "subnets" {
   public_subnet_assign_ipv6_address_on_creation  = true
   enable_ipv6                                    = true
   private_subnet_assign_ipv6_address_on_creation = true
+
 }
