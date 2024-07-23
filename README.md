@@ -19,7 +19,7 @@ To use this module, include it in your Terraform configuration file and provide 
 
 ```hcl
 module "private-subnets" {
-  source              = "git::https://github.com/opsstation/terraform-aws-subnet.git?ref=v1.0.0"
+  source              = "git::https://github.com/yadavprakash/terraform-aws-subnet.git?ref=v1.0.0"
   name                = "app"
   environment         = "test"
   nat_gateway_enabled = true
@@ -91,13 +91,13 @@ module "subnet" {
 
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [Examples](https://github.com/opsstation/terraform-aws-subnet/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Examples](https://github.com/yadavprakash/terraform-aws-subnet/tree/master/_example) directory within this repository.
 
 ## Author
-Your Name Replace **MIT** and **opsstation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Your Name Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/opsstation/terraform-aws-subnet/blob/master/LICENSE) file for details.
+This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/yadavprakash/terraform-aws-subnet/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -117,8 +117,8 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_private-labels"></a> [private-labels](#module\_private-labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
-| <a name="module_public-labels"></a> [public-labels](#module\_public-labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_private-labels"></a> [private-labels](#module\_private-labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_public-labels"></a> [public-labels](#module\_public-labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -173,7 +173,7 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 | <a name="input_ipv4_public_cidrs"></a> [ipv4\_public\_cidrs](#input\_ipv4\_public\_cidrs) | Subnet CIDR blocks (e.g. `10.0.0.0/16`). | `list(any)` | `[]` | no |
 | <a name="input_ipv6_cidr_block"></a> [ipv6\_cidr\_block](#input\_ipv6\_cidr\_block) | Base CIDR block which is divided into subnet CIDR blocks (e.g. `10.0.0.0/16`). | `string` | `null` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`Environment`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'OpsStation'. | `string` | `""` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `""` | no |
 | <a name="input_map_public_ip_on_launch"></a> [map\_public\_ip\_on\_launch](#input\_map\_public\_ip\_on\_launch) | Specify true to indicate that instances launched into the public subnet should be assigned a public IP address. | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `prod-subnet` or `subnet`). | `string` | `""` | no |
 | <a name="input_nat_gateway_destination_cidr_block"></a> [nat\_gateway\_destination\_cidr\_block](#input\_nat\_gateway\_destination\_cidr\_block) | Used to pass a custom destination route for private NAT Gateway. If not specified, the default 0.0.0.0/0 is used as a destination route | `string` | `"0.0.0.0/0"` | no |
@@ -199,7 +199,7 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 | <a name="input_public_subnet_ids"></a> [public\_subnet\_ids](#input\_public\_subnet\_ids) | A list of public subnet ids. | `list(string)` | `[]` | no |
 | <a name="input_public_subnet_ipv6_native"></a> [public\_subnet\_ipv6\_native](#input\_public\_subnet\_ipv6\_native) | Indicates whether to create an IPv6-only public subnet. Default: `false` | `bool` | `false` | no |
 | <a name="input_public_subnet_private_dns_hostname_type_on_launch"></a> [public\_subnet\_private\_dns\_hostname\_type\_on\_launch](#input\_public\_subnet\_private\_dns\_hostname\_type\_on\_launch) | The type of hostnames to assign to instances in the subnet at launch. For IPv6-only subnets, an instance DNS name must be based on the instance ID. For dual-stack and IPv4-only subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. Valid values: `ip-name`, `resource-name` | `string` | `null` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-aws-subnet"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-aws-subnet"` | no |
 | <a name="input_single_nat_gateway"></a> [single\_nat\_gateway](#input\_single\_nat\_gateway) | Enable for only single NAT Gateway in one Availability Zone | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. map(`BusinessUnit`,`XYZ`). | `map(any)` | `{}` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of subnets to create (`private` or `public`). | `string` | `""` | no |
