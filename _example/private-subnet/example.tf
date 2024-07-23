@@ -6,7 +6,7 @@ provider "aws" {
 ## Vpc Module call.
 ##-----------------------------------------------------------------------------
 module "vpc" {
-  source                              = "git::https://github.com/opsstation/terraform-aws-vpc.git?ref=v1.0.0"
+  source                              = "git::https://github.com/yadavprakash/terraform-aws-vpc.git?ref=v1.0.0"
   name                                = "app"
   environment                         = "test"
   cidr_block                          = "10.0.0.0/16"
@@ -34,3 +34,4 @@ module "private-subnets" {
   ipv4_private_cidrs  = ["10.0.3.0/24"]
   public_subnet_ids   = ["subnet-07962e9e61ad3bcd3"]
 }
+
